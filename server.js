@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors"); // Import cors middleware
 
 const app = express();
-const port = 3000;
+
 
 // Use cors middleware
 app.use(cors());
@@ -70,8 +70,9 @@ app.post("/sendEmail", (req, res) => {
 });
 
 // Start server
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
 
 /*
