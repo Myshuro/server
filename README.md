@@ -1,1 +1,1 @@
-# server
+# server for the aquadro website
